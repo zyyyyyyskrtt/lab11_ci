@@ -1,0 +1,245 @@
+/* --- Aturan Umum --- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4; /* Background luar sedikit abu-abu */
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sedikit bayangan di luar kotak */
+}
+
+/* --- Header --- */
+header {
+    padding: 20px 30px;
+    background-color: #ffffff;
+}
+
+header h1 {
+    color: #b0b0b0; /* Warna teks abu-abu terang sesuai modul */
+    font-size: 32px;
+    margin: 0;
+}
+
+/* --- Navigasi --- */
+nav {
+    background-color: #1a5e9a; /* Warna background biru tua */
+    display: flex;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover, nav a.active {
+    background-color: #2e86de; /* Warna biru lebih terang untuk menu aktif */
+}
+
+/* --- Area Konten Utama --- */
+#wrapper {
+    display: flex;
+    padding: 20px 30px;
+    gap: 30px; /* Jarak antara kiri dan kanan */
+}
+
+#main {
+    flex: 7; /* Porsi lebar 70% */
+}
+
+#main h1 {
+    font-size: 22px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+#main hr {
+    border: 0;
+    border-top: 1px solid #888888;
+    margin-bottom: 15px;
+}
+
+#main p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* --- Sidebar (Widget) --- */
+#sidebar {
+    flex: 3; /* Porsi lebar 30% */
+}
+
+.widget-box {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+.widget-box .title {
+    background-color: #4a8bc2; /* Warna background biru widget */
+    color: #ffffff;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.widget-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget-box ul li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.widget-box ul li:last-child {
+    border-bottom: none;
+}
+
+.widget-box ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+}
+
+.widget-box ul li a:hover {
+    background-color: #f9f9f9;
+}
+
+.widget-box p {
+    padding: 15px;
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1a1a1a; /* Warna background footer hitam */
+    color: #cccccc;
+    padding: 15px 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+/* --- Tabel Admin --- */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #4a8bc2; /* Warna biru senada dengan widget */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Efek belang-belang (zebra) biar mudah dibaca */
+}
+
+/* --- Tombol (Buttons) --- */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #aaa; /* Warna abu-abu untuk tombol ubah sesuai modul */
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #888;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Warna merah untuk tombol hapus */
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-large {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2b6cb0; /* Biru untuk tombol Kirim di form */
+}
+
+.btn-large:hover {
+    background-color: #1a5e9a;
+}
+
+/* --- Form Elements (Tambah/Edit Artikel) --- */
+form p {
+    margin-bottom: 15px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Agar padding tidak bikin input melebar keluar kotak */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #4a8bc2;
+    outline: none;
+}
+/* --- Styling Khusus Artikel --- */
+.entry {
+    margin-bottom: 30px;
+}
+
+/* Mengubah style link judul artikel */
+.entry h2 a {
+    color: #555555; /* Warna abu-abu gelap sesuai modul */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    font-size: 24px;
+}
+
+.entry h2 a:hover {
+    color: #1a5e9a; /* Warna biru saat kursor diarahkan (opsional) */
+}
+
+/* Menyesuaikan jarak dan warna teks isi artikel */
+.entry p {
+    color: #777777; /* Warna teks abu-abu terang */
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Menyesuaikan garis pembatas antar artikel */
+hr.divider {
+    border: 0;
+    border-top: 1px solid #eeeeee; /* Garis tipis dan samar */
+    margin: 20px 0;
+}

@@ -1,0 +1,337 @@
+ERROR - 2026-03-31 23:01:56 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xamppp\htdocs\lab11_ci\ci4\system\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xamppp\htdocs\lab11_ci\ci4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xamppp\htdocs\lab11_ci\ci4\app\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(951): App\Controllers\Artikel->index()
+#8 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#9 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xamppp\htdocs\lab11_ci\ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xamppp\htdocs\lab11_ci\ci4\system\rewrite.php(44): require_once('C:\\xamppp\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xamppp\htdocs\lab11_ci\ci4\system\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xamppp\htdocs\lab11_ci\ci4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xamppp\htdocs\lab11_ci\ci4\app\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(951): App\Controllers\Artikel->index()
+#7 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#8 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xamppp\htdocs\lab11_ci\ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xamppp\htdocs\lab11_ci\ci4\system\rewrite.php(44): require_once('C:\\xamppp\\htdoc...')
+#13 {main}
+CRITICAL - 2026-03-31 23:01:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: artikel]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+ERROR - 2026-03-31 23:02:19 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xamppp\htdocs\lab11_ci\ci4\system\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xamppp\htdocs\lab11_ci\ci4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xamppp\htdocs\lab11_ci\ci4\app\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(951): App\Controllers\Artikel->index()
+#8 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#9 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xamppp\htdocs\lab11_ci\ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xamppp\htdocs\lab11_ci\ci4\system\rewrite.php(44): require_once('C:\\xamppp\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xamppp\htdocs\lab11_ci\ci4\system\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xamppp\htdocs\lab11_ci\ci4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xamppp\htdocs\lab11_ci\ci4\app\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(951): App\Controllers\Artikel->index()
+#7 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#8 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xamppp\htdocs\lab11_ci\ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xamppp\htdocs\lab11_ci\ci4\system\rewrite.php(44): require_once('C:\\xamppp\\htdoc...')
+#13 {main}
+CRITICAL - 2026-03-31 23:02:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: artikel]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+ERROR - 2026-03-31 23:03:27 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4' in C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xamppp\htdocs\lab11_ci\ci4\system\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xamppp\htdocs\lab11_ci\ci4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xamppp\htdocs\lab11_ci\ci4\app\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(951): App\Controllers\Artikel->index()
+#8 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#9 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xamppp\htdocs\lab11_ci\ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xamppp\htdocs\lab11_ci\ci4\system\rewrite.php(44): require_once('C:\\xamppp\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4' in C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xamppp\htdocs\lab11_ci\ci4\system\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xamppp\htdocs\lab11_ci\ci4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xamppp\htdocs\lab11_ci\ci4\app\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(951): App\Controllers\Artikel->index()
+#7 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#8 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xamppp\htdocs\lab11_ci\ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xamppp\htdocs\lab11_ci\ci4\system\rewrite.php(44): require_once('C:\\xamppp\\htdoc...')
+#13 {main}
+CRITICAL - 2026-03-31 23:03:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+[Method: GET, Route: artikel]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+ERROR - 2026-03-31 23:03:44 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4' in C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xamppp\htdocs\lab11_ci\ci4\system\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xamppp\htdocs\lab11_ci\ci4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xamppp\htdocs\lab11_ci\ci4\app\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(951): App\Controllers\Artikel->index()
+#8 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#9 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xamppp\htdocs\lab11_ci\ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xamppp\htdocs\lab11_ci\ci4\system\rewrite.php(44): require_once('C:\\xamppp\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4' in C:\xamppp\htdocs\lab11_ci\ci4\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xamppp\htdocs\lab11_ci\ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xamppp\htdocs\lab11_ci\ci4\system\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xamppp\htdocs\lab11_ci\ci4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xamppp\htdocs\lab11_ci\ci4\app\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(951): App\Controllers\Artikel->index()
+#7 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#8 C:\xamppp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\xamppp\htdocs\lab11_ci\ci4\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xamppp\htdocs\lab11_ci\ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xamppp\htdocs\lab11_ci\ci4\system\rewrite.php(44): require_once('C:\\xamppp\\htdoc...')
+#13 {main}
+CRITICAL - 2026-03-31 23:03:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+[Method: GET, Route: artikel]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(254): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+CRITICAL - 2026-03-31 23:10:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "artikel/detail.php"
+[Method: GET, Route: artikel/artikel-pertama]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('artikel/detail.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('artikel/detail', [], true)
+ 3 APPPATH\Controllers\artikel.php(28): view('artikel/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->view('artikel-pertama')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+CRITICAL - 2026-03-31 23:15:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/admin_header.php"
+[Method: GET, Route: admin/artikel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/admin_header.php')
+ 2 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/admin_header', null, true)
+ 3 APPPATH\Views\artikel\admin_index.php(1): CodeIgniter\View\View->include('template/admin_header')
+ 4 SYSTEMPATH\View\View.php(238): include('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\app\\Views\\artikel\\admin_index.php')
+ 5 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('artikel/admin_index', [], true)
+ 7 APPPATH\Controllers\artikel.php(37): view('artikel/admin_index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->admin_index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+CRITICAL - 2026-03-31 23:17:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/admin_header.php"
+[Method: GET, Route: admin/artikel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/admin_header.php')
+ 2 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/admin_header', null, true)
+ 3 APPPATH\Views\artikel\admin_index.php(1): CodeIgniter\View\View->include('template/admin_header')
+ 4 SYSTEMPATH\View\View.php(238): include('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\app\\Views\\artikel\\admin_index.php')
+ 5 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('artikel/admin_index', [], true)
+ 7 APPPATH\Controllers\artikel.php(37): view('artikel/admin_index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->admin_index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+CRITICAL - 2026-03-31 23:18:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/admin_header.php"
+[Method: GET, Route: admin/artikel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/admin_header.php')
+ 2 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/admin_header', null, true)
+ 3 APPPATH\Views\artikel\admin_index.php(1): CodeIgniter\View\View->include('template/admin_header')
+ 4 SYSTEMPATH\View\View.php(238): include('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\app\\Views\\artikel\\admin_index.php')
+ 5 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('artikel/admin_index', [], true)
+ 7 APPPATH\Controllers\artikel.php(37): view('artikel/admin_index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->admin_index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+CRITICAL - 2026-03-31 23:19:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/admin_footer.php"
+[Method: GET, Route: admin/artikel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/admin_footer.php')
+ 2 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/admin_footer', null, true)
+ 3 APPPATH\Views\artikel\admin_index.php(32): CodeIgniter\View\View->include('template/admin_footer')
+ 4 SYSTEMPATH\View\View.php(238): include('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\app\\Views\\artikel\\admin_index.php')
+ 5 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('artikel/admin_index', [], true)
+ 7 APPPATH\Controllers\artikel.php(37): view('artikel/admin_index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->admin_index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+CRITICAL - 2026-03-31 23:20:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "artikel/form_add.php"
+[Method: GET, Route: admin/artikel/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('artikel/form_add.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('artikel/form_add', [], true)
+ 3 APPPATH\Controllers\artikel.php(57): view('artikel/form_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->add()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+CRITICAL - 2026-03-31 23:21:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "artikel/form_add.php"
+[Method: GET, Route: admin/artikel/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('artikel/form_add.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('artikel/form_add', [], true)
+ 3 APPPATH\Controllers\artikel.php(57): view('artikel/form_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->add()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+CRITICAL - 2026-03-31 23:32:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "artikel/form_add.php"
+[Method: GET, Route: admin/artikel/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('artikel/form_add.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('artikel/form_add', [], true)
+ 3 APPPATH\Controllers\artikel.php(57): view('artikel/form_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->add()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
+CRITICAL - 2026-03-31 23:33:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "artikel/form_add.php"
+[Method: GET, Route: admin/artikel/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('artikel/form_add.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('artikel/form_add', [], true)
+ 3 APPPATH\Controllers\artikel.php(57): view('artikel/form_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Artikel->add()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xamppp\\htdocs\\lab11_ci\\ci4\\public\\index.php')
