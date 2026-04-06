@@ -64,8 +64,91 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 # Result Photo
 ![foto](https://github.com/zyyyyyyskrtt/lab11_ci/blob/ce6dd264d3e5560327ab7df5ab09f59b04b178cf/result%20photo/Screenshot%202026-04-02%20082534.png)
 
+# 1. Tampilan visual
+
+Form Input: Terdapat dua kolom input, yaitu `Email address` dan Password. Ini dibuat menggunakan class dari Bootstrap (`form-control`) agar tampilannya bersih.
+
+Keamanan (Flashdata): Kalau kamu perhatikan di kodenya, ada blok untuk menampilkan Flashdata (`session()->getFlashdata('flash_msg')`). Kalau kamu salah memasukkan email atau password, pesan error (warna merah) akan muncul tepat di bawah tulisan "Sign In".
+
+# Alur Kerja Saat Tombol "login" Diklik (Controller & model)
+
+Kirim Data (POST): Data email dan password dikirim ke sistem menggunakan metode `POST`.
+
+Pengecekan di Controller (`User.php`): Controller akan menangkap data tersebut.
+
+Pencarian di Database (`UserModel`): Controller menyuruh `UserModel` untuk mencari apakah `Email` yang dimasukkan ada di dalam tabel `user` di database MySQL kamu.
+
+Verifikasi Password: Kalau emailnya ketemu, sistem akan mencocokkan password yang kamu ketik dengan password acak (hash) yang ada di database menggunakan fungsi `password_verify()`.
+
+Pembuatan Sesi (Session): Jika email dan password cocok, sistem akan mencatat identitas kamu ke dalam Session (memberikan status   `'logged_in' => TRUE`). Sesi ini ibarat "kartu ID/akses" sementaramu.
+
+Redirect (Pindah Halaman): Setelah punya "kartu ID", kamu akan otomatis dilempar masuk ke halaman khusus admin (yaitu ke rute `/admin/artikel`).
+
+# 3. Cara Ngetes 
+
+Coba masukkan data akun dummy yang sudah kamu buat pakai Database Seeder sebelumnya:
+
+Email: `admin@email.com`
+
+Password: `admin123`
+
 ![foto](https://github.com/zyyyyyyskrtt/lab11_ci/blob/ce6dd264d3e5560327ab7df5ab09f59b04b178cf/result%20photo/Screenshot%202026-04-02%20082554.png)
+
+# 1. View Layout 
+
+Mulai dari judul "Layout Sederhana" di paling atas, pita navigasi warna biru (Home, Artikel, About, Kontak), sampai baris hitam "© 2021 Universitas Pelita Bangsa" di paling bawah, itu semua adalah View Layout .
+
+Ini asalnya dari file `layout/main.php`. Layout ini bertindak sebagai bungkus luar yang bentuknya akan selalu sama, apa pun halaman yang lagi lu buka.
+
+# 2. View Biasa 
+
+Bagian putih di sebelah kiri yang ada tulisan "Halaman About" itu adalah View biasa (dari file `about.php`).
+
+Konten ini disuntikkan ke dalam View Layout menggunakan fungsi `$this->section('content')`. Kalau lu klik menu "Home" atau "Kontak", area kiri inilah yang bakal berubah-ubah isinya menyesuaikan halaman yang dipanggil, sementara header dan footernya tetap diam.
+
+# 3. View Cell
+
+Nah, kotak biru "Artikel Terkini" di sidebar kanan itu adalah hasil kerja View Cell .
+
+Di sini kelihatan jelas perbedaan View Cell dan View biasa: View Cell itu bisa manggil datanya sendiri (narik judul "Artikel Keempat", "Artikel ketiga", dll. dari database) tanpa peduli lu lagi ada di controller apa . Jadi, komponen ini sangat modular dan bisa dipasang di halaman mana aja dengan gampang.
+
+Dua kotak di bawahnya ("Widget Header" dan "Widget Text") itu cuma kode HTML biasa yang diselipin manual di dalam layout .
 
 ![foto](https://github.com/zyyyyyyskrtt/lab11_ci/blob/ce6dd264d3e5560327ab7df5ab09f59b04b178cf/result%20photo/Screenshot%202026-04-02%20082611.png)
 
+# 1. Menampilkan Data (Read)
+
+Tabel berwarna biru ini membuktikan bahwa fungsi `admin_index()` di Controller `Artikel.php` lu udah berhasil terkoneksi ke database `lab_ci4`. Kode `$model->findAll()` berhasil menarik data dari tabel artikel dan menampilkannya satu per satu menggunakan looping `foreach` di dalam file view `admin_index.php`.
+
+# 2. Tambah data  (Create)
+
+di situ udah ada "Artikel ketiga" dan "Artikel Keempat". Ini berarti dah sukses mencoba ngeklik menu "Tambah Artikel", ngisi form-nya, dan datanya berhasil masuk (insert) ke dalam database MySQL tanpa kendala.
+
+# 3. Tombol aksi (Update & Delete)
+
+Di kolom paling kanan ada tombol Ubah (Abu-abu) dan Hapus (Merah).
+
+  * Kalau di klik Ubah, dia bakal ngebawa ke form edit (form_edit.php) beserta data artikel tersebut.
+
+  * Kalau di klik Hapus, bakal muncul peringatan "Yakin menghapus data?", dan kalau di-oke-in, artikelnya bakal lenyap         dari database.
+
+
 ![foto](https://github.com/zyyyyyyskrtt/lab11_ci/blob/ce6dd264d3e5560327ab7df5ab09f59b04b178cf/result%20photo/Screenshot%202026-04-02%20082623.png)
+
+# 1. Menampilkan Data Dinamis (Read)
+
+Kalau di awal praktikum lu cuma masukin "Artikel pertama" dan "Artikel kedua" lewat phpMyAdmin/MySQL, sekarang lu bisa lihat "Artikel ketiga" dan "Artikel Keempat" udah otomatis muncul di halaman depan. Ini membuktikan bahwa data yang lu input dari halaman Admin tadi berhasil masuk ke database dan sukses ditarik ke halaman publik ini.
+
+# 2. Struktur Berjalan
+
+Di balik layar, ini adalah hasil kerja keras dari fungsi `index()` pada controller `Artikel.php` yang ngejalanin perintah `$model->findAll()`. Data tersebut kemudian dilempar ke view `artikel/index.php`, lalu diurai satu per satu pakai fungsi looping `foreach` sehingga membentuk urutan artikel ke bawah.
+
+# 3. Implementasi css
+
+Tampilan halamannya udah persis banget sama target di modul praktikum:
+
+  *Layout 2 Kolom: Area konten utama di sebelah kiri (70%) dan area Widget/Sidebar di sebelah kanan (30%) udah terbagi rapi menggunakan fungsi flex di CSS lu.
+
+  *Styling Artikel: Judul artikelnya udah berubah jadi warna abu-abu elegan (tanpa garis bawah warna biru lagi), dan teks isinya udah punya warna yang lebih soft.
+
+  *Garis Pembatas: Tag <hr class="divider"> udah sukses ngebentuk garis tipis abu-abu di antara setiap artikel biar kelihatan rapi.
