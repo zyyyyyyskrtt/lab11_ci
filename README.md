@@ -147,8 +147,8 @@ Di balik layar, ini adalah hasil kerja keras dari fungsi `index()` pada controll
 
 Tampilan halamannya udah persis banget sama target di modul praktikum:
 
-  *Layout 2 Kolom: Area konten utama di sebelah kiri (70%) dan area Widget/Sidebar di sebelah kanan (30%) udah terbagi rapi menggunakan fungsi flex di CSS lu.
+  * Layout 2 Kolom: Area konten utama di sebelah kiri (70%) dan area Widget/Sidebar di sebelah kanan (30%) udah terbagi rapi menggunakan fungsi flex di CSS lu.
 
-  *Styling Artikel: Judul artikelnya udah berubah jadi warna abu-abu elegan (tanpa garis bawah warna biru lagi), dan teks isinya udah punya warna yang lebih soft.
+  * Styling Artikel: Judul artikelnya udah berubah jadi warna abu-abu elegan (tanpa garis bawah warna biru lagi), dan teks isinya udah punya warna yang lebih soft.
 
-  *Garis Pembatas: Tag <hr class="divider"> udah sukses ngebentuk garis tipis abu-abu di antara setiap artikel biar kelihatan rapi.
+  * Garis Pembatas: Tag `<hr class="divider">` udah sukses ngebentuk garis tipis abu-abu di antara setiap artikel biar kelihatan rapi.
